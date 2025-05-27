@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const scrib = {
+            show(msg) {
+                // Look for an element with id="scrib"; if not found, append to <body>
+                let container = document.getElementById("scrib");
+                if (!container) {
+                    container = document.createElement("div");
+                    container.id = "scrib";
+                    document.body.appendChild(container);
+                }
+                const p = document.createElement("p");
+                p.textContent = msg;
+                container.appendChild(p);
+            }
+        };
+    </script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
